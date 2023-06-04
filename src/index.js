@@ -40,3 +40,39 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 };
 
 console.log('project wired!')
+//Images
+
+const logoImg = document.querySelector("#logo-img");
+logoImg.src = "http://localhost:9000/img/logo.png"
+
+const ctaImg = document.querySelector("#cta-img");
+ctaImg.src = "http://localhost:9000/img/cta.png";
+
+const accentImg = document.querySelector("#middle-img");
+accentImg.src = "http://localhost:9000/img/accent.png";
+
+
+//Footer
+
+const footertext = document.querySelector("footer a");
+footertext.textContent = "Copyright Great Idea! 2021";
+footertext.classList.add("bold");
+
+//Contact text
+
+const contact = document.querySelector("section.contact");
+contact.querySelector("h4").textContent = "Contact";
+contact.querySelector("p:nth-of-type(1)").textContent = "123 Way 456 Street Somewhere, USA";
+contact.querySelector("p:nth-of-type(2)").textContent = "1 (888) 888-8888";
+contact.querySelector("p:nth-of-type(3)").textContent = "sales@greatidea.io";
+
+//bottom content
+
+// bottomCont = document.querySelector(".bottom-content");
+// console.log(bottomCont);
+// bottomCont.querySelector("h4").textContent = "Services"
+// bottomCont.querySelector("p:nth-of-type(1)").textContent = "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis";
+
+
+
+
