@@ -68,11 +68,39 @@ contact.querySelector("p:nth-of-type(3)").textContent = "sales@greatidea.io";
 
 //bottom content
 
-// bottomCont = document.querySelector(".bottom-content");
-// console.log(bottomCont);
-// bottomCont.querySelector("h4").textContent = "Services"
-// bottomCont.querySelector("p:nth-of-type(1)").textContent = "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis";
+const bottomCont = document.querySelector(".bottom-content");
+const bottomHeaders = bottomCont.querySelectorAll("h4");
+bottomHeaders[0].textContent = siteContent["main-content"]["services-h4"];
+bottomHeaders[1].textContent = siteContent["main-content"]["product-h4"];
+bottomHeaders[2].textContent = siteContent["main-content"]["vision-h4"];
+
+const bottomPara = bottomCont.querySelectorAll("p");
+bottomPara[0].textContent = siteContent["main-content"]["services-content"];
+bottomPara[1].textContent = siteContent["main-content"]["product-content"];
+bottomPara[2].textContent = siteContent["main-content"]["vision-content"];
 
 
+//top Content
 
+const topCont = document.querySelector(".top-content");
+topCont.children[0].children[0].textContent = siteContent["main-content"]["features-h4"];
+topCont.children[0].children[1].textContent = siteContent["main-content"]["features-content"];
+topCont.children[1].children[0].textContent = siteContent["main-content"]["about-h4"];
+topCont.children[1].children[1].textContent = siteContent["main-content"]["about-content"];
+
+//CTA
+
+const ctaHeader = document.querySelector(".cta h1");
+ctaHeader.textContent = "DOM Is Awesome"
+document.querySelector(".cta button").textContent = "Get Started"
+
+
+// NAv links
+
+const navlinks = document.querySelectorAll(" nav a")
+const navText = Object.values(siteContent.nav);
+navlinks.forEach((links, index) => {
+  links.textContent = navText[index]
+  links.classList.add("italic")
+});
 
